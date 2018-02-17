@@ -20,3 +20,17 @@ E:\Limbaje de programare - editare - design\C#\Aplicatii\Hunter\BunnyHunter\obj\
 E:\Limbaje de programare - editare - design\C#\Aplicatii\Hunter\BunnyHunter\obj\Debug\BunnyHunter.BunnyHunter.resources
 E:\Limbaje de programare - editare - design\C#\Aplicatii\Hunter\BunnyHunter\obj\Debug\BunnyHunter.Properties.Resources.resources
 E:\Limbaje de programare - editare - design\C#\Aplicatii\Hunter\BunnyHunter\obj\Debug\BunnyHunter.csproj.GenerateResource.Cache
+C:\Users\Cristiana\Desktop\Hunter\BunnyHunter\bin\Debug\BunnyHunter.exe.config
+C:\Users\Cristiana\Desktop\Hunter\BunnyHunter\obj\Debug\Interop.WMPLib.dll
+C:\Users\Cristiana\Desktop\Hunter\BunnyHunter\obj\Debug\AxInterop.WMPLib.dll
+C:\Users\Cristiana\Desktop\Hunter\BunnyHunter\obj\Debug\BunnyHunter.csproj.ResolveComReference.cache
+C:\Users\Cristiana\Desktop\Hunter\BunnyHunter\obj\Debug\BunnyHunter.exe
+C:\Users\Cristiana\Desktop\Hunter\BunnyHunter\obj\Debug\BunnyHunter.pdb
+C:\Users\Cristiana\Desktop\Hunter\BunnyHunter\bin\Debug\BunnyHunter.exe
+C:\Users\Cristiana\Desktop\Hunter\BunnyHunter\bin\Debug\BunnyHunter.pdb
+C:\Users\Cristiana\Desktop\Hunter\BunnyHunter\bin\Debug\Interop.WMPLib.dll
+C:\Users\Cristiana\Desktop\Hunter\BunnyHunter\bin\Debug\AxInterop.WMPLib.dll
+C:\Users\Cristiana\Desktop\Hunter\BunnyHunter\obj\Debug\BunnyHunter.csprojResolveAssemblyReference.cache
+C:\Users\Cristiana\Desktop\Hunter\BunnyHunter\obj\Debug\BunnyHunter.BunnyHunter.resources
+C:\Users\Cristiana\Desktop\Hunter\BunnyHunter\obj\Debug\BunnyHunter.Properties.Resources.resources
+C:\Users\Cristiana\Desktop\Hunter\BunnyHunter\obj\Debug\BunnyHunter.csproj.GenerateResource.Cache
