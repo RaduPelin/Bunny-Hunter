@@ -399,7 +399,7 @@ namespace BunnyHunter
 
         private void PlayBackgroundSound()
         {
-            backgroundSound.URL = @"D:\Limbaje de programare - editare - design\C#\Aplicatii\Hunter\BunnyHunter\Resources\Sounds\Background.wav";
+            backgroundSound.URL = @"YOURPATH\BunnyHunter\Resources\Sounds\Background.wav";
 
             backgroundSound.settings.setMode("loop", true);
 
@@ -412,7 +412,7 @@ namespace BunnyHunter
         {
             Random choose = new Random();
             int next = choose.Next(1, 9);
-            nextPlay.URL = @"D:\Limbaje de programare - editare - design\C#\Aplicatii\Hunter\BunnyHunter\Resources\Sounds\PlayBackground " + next + ".wav";
+            nextPlay.URL = @"YOURPATH\BunnyHunter\Resources\Sounds\PlayBackground " + next + ".wav";
 
             nextPlay.settings.setMode("loop", true);
 
@@ -426,7 +426,7 @@ namespace BunnyHunter
         {
             if (isSound && isPlayed && totalScore >= 10)
             {
-                gunshotSound.URL = @"D:\Limbaje de programare - editare - design\C#\Aplicatii\Hunter\BunnyHunter\Resources\Sounds\ButtonClickSound.wav";
+                gunshotSound.URL = @"YOURPATH\BunnyHunter\Resources\Sounds\ButtonClickSound.wav";
 
                 gunshotSound.Ctlcontrols.play();
             }
@@ -436,7 +436,7 @@ namespace BunnyHunter
         {
             if (isSound)
             {
-                bunnySound.URL = @"D:\Limbaje de programare - editare - design\C#\Aplicatii\Hunter\BunnyHunter\Resources\Sounds\BunnySound.wav";
+                bunnySound.URL = @"YOURPATH\BunnyHunter\Resources\Sounds\BunnySound.wav";
 
                 bunnySound.Ctlcontrols.play();
             }
@@ -446,7 +446,7 @@ namespace BunnyHunter
         {
             if (isSound)
             {
-                bunnyHitSound.URL = @"D:\Limbaje de programare - editare - design\C#\Aplicatii\Hunter\BunnyHunter\Resources\Sounds\BunnyHitSound.wav";
+                bunnyHitSound.URL = @"YOURPATH\BunnyHunter\Resources\Sounds\BunnyHitSound.wav";
 
                 bunnyHitSound.Ctlcontrols.play();
             }
@@ -455,7 +455,7 @@ namespace BunnyHunter
         private void PlayFlySound(AxWMPLib.AxWindowsMediaPlayer fly)
         {
 
-            fly.URL = @"D:\Limbaje de programare - editare - design\C#\Aplicatii\Hunter\BunnyHunter\Resources\Sounds\FlySound.wav";
+            fly.URL = @"YOURPATH\BunnyHunter\Resources\Sounds\FlySound.wav";
 
             fly.settings.setMode("loop", true);
 
@@ -469,7 +469,7 @@ namespace BunnyHunter
         {
             if (isSound)
             {
-                fly.URL = @"D:\Limbaje de programare - editare - design\C#\Aplicatii\Hunter\BunnyHunter\Resources\Sounds\FlyHitSound.wav";
+                fly.URL = @"YOURPATH\BunnyHunter\Resources\Sounds\FlyHitSound.wav";
 
                 fly.settings.setMode("loop", false);
             }
@@ -479,7 +479,7 @@ namespace BunnyHunter
         {
             if (isSound)
             {
-                button.URL = @"D:\Limbaje de programare - editare - design\C#\Aplicatii\Hunter\BunnyHunter\Resources\Sounds\ButtonHoverSound.wav";
+                button.URL = @"YOURPATH\BunnyHunter\Resources\Sounds\ButtonHoverSound.wav";
 
                 button.Ctlcontrols.play();
             }
@@ -489,7 +489,7 @@ namespace BunnyHunter
         {
             if (isSound)
             {
-                button.URL = @"D:\Limbaje de programare - editare - design\C#\Aplicatii\Hunter\BunnyHunter\Resources\Sounds\ButtonClickSound.wav";
+                button.URL = @"YOURPATH\BunnyHunter\Resources\Sounds\ButtonClickSound.wav";
 
                 button.Ctlcontrols.play();
             }
@@ -499,7 +499,7 @@ namespace BunnyHunter
         {
             if (isSound)
             {
-                standbySound.URL = @"D:\Limbaje de programare - editare - design\C#\Aplicatii\Hunter\BunnyHunter\Resources\Sounds\StandbySound.wav";
+                standbySound.URL = @"YOURPATH\BunnyHunter\Resources\Sounds\StandbySound.wav";
 
                 standbySound.settings.setMode("loop", true);
             }
@@ -509,7 +509,7 @@ namespace BunnyHunter
         {
             if (isSound)
             {
-                gameOverSound.URL = @"D:\Limbaje de programare - editare - design\C#\Aplicatii\Hunter\BunnyHunter\Resources\Sounds\GameOverSound.wav";
+                gameOverSound.URL = @"YOURPATHi\Hunter\BunnyHunter\Resources\Sounds\GameOverSound.wav";
 
                 gameOverSound.Ctlcontrols.play();
             }
