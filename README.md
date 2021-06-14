@@ -1,10 +1,10 @@
-                                            Bunny-Hunter
-                                           
+# Bunny-Hunter
+Small game in C# within a Windows Form                                        
                                             
-  If the bunny is too flufy for your eyes, dont't judge me!
-  
-  Enjoy !
+# [DEMO](https://www.youtube.com/watch?v=Fo5IngcumW4&t=6s&ab_channel=RaduPelinRaduPelin)
 
-  PS: In order to play the game, you need to add Windows Media Player library (wbm.dll) in your project.
-      
-  Modify in the Form (BunnyHunter.cs) the path for sound resources.
+Tips:
+
+- [x] In order to play the game, you need to add Windows Media Player library (wbm.dll) in your project
+
+- [x] Modify in the Form (BunnyHunter.cs) the path for sound resources.
