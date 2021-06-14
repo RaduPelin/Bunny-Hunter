@@ -1,0 +1,477 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{77A3E6AA-5217-4186-A29E-09500ED6E179}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BunnyHunter</RootNamespace>
+    <AssemblyName>BunnyHunter</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DynamicImageHandler, Version=3.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Dynamic.Image.Handler.3.1.8\lib\net452\DynamicImageHandler.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DynamicImageHandler.ImageTool.FreeImage, Version=3.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Dynamic.Image.Handler.3.1.8\lib\net452\DynamicImageHandler.ImageTool.FreeImage.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DynamicImageHandler.ImageTool.Wpf, Version=3.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Dynamic.Image.Handler.3.1.8\lib\net452\DynamicImageHandler.ImageTool.Wpf.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="FreeImage-dotnet-core, Version=4.0.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\FreeImage-dotnet-core.4.0.3\lib\net452\FreeImage-dotnet-core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BunnyHunter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BunnyHunter.Designer.cs">
+      <DependentUpon>BunnyHunter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CBunny.cs" />
+    <Compile Include="CDucks.cs" />
+    <Compile Include="CFly.cs" />
+    <Compile Include="CImageBase.cs" />
+    <Compile Include="CLevel.cs" />
+    <Compile Include="CLifeBar.cs" />
+    <Compile Include="CMusicOn.cs" />
+    <Compile Include="CScoreFrame.cs" />
+    <Compile Include="CSplat.cs" />
+    <Compile Include="CSign.cs" />
+    <Compile Include="CInfo.cs" />
+    <Compile Include="CTree.cs" />
+    <Compile Include="CustomCursor.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="BunnyHunter.resx">
+      <DependentUpon>BunnyHunter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AxWMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="WMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Demo\Demo.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sounds\Background.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sounds\BunnyHitSound.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sounds\BunnySound.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sounds\ButtonClickSound.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sounds\ButtonHoverSound.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sounds\FlyHitSound.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sounds\FlySound.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sounds\GameOverSound.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sounds\PlayBackground 1.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sounds\PlayBackground 2.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sounds\PlayBackground 3.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sounds\PlayBackground 4.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sounds\PlayBackground 5.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sounds\PlayBackground 6.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sounds\PlayBackground 7.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sounds\PlayBackground 8.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sounds\StandbySound.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Design\Background.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Design\BloodSplat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Design\Bunny.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Design\GameOverBackground.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Design\MusicSettings.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Design\ScoreFrame.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Design\Sign 1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Design\Sign 2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Design\Target.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Update\Update 1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Update\Update 2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Update\Update 3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Update\Update 4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Update\Update 5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Update\Update 6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Update\Update 7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Update\Update 8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Update\Update 9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Update\Update 10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Update\Update 11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Update\Update 12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fly\Fly 1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fly\Fly 2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fly\Fly 3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fly\Fly 4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fly\Fly 5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fly\Fly 6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fly\Fly 7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fly\Fly 8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fly\Fly 9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fly\Fly 10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fly\Fly 11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fly\Fly 12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fly\Fly 13.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fly\Fly 14.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fly\Fly 15.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fly\Fly 16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fly\Fly 17.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fly\Fly 18.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fly\Fly 19.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fly\Fly 20.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fly\Fly 21.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fly\Fly 22.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fly\Fly 23.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fly\Fly 24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Design\Icon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ducks\Ducks 1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ducks\Ducks 2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ducks\Ducks 3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ducks\Ducks 4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ducks\Ducks 5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Update\Update.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Design\Tree.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\Tools\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Levels\Level1 1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Levels\Level1 2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Levels\Level1 3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Levels\Level1 4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Levels\Level1 5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Levels\Level1 6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Levels\Level1 7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Levels\Level1 8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Levels\Level1 9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Levels\Level2 1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Levels\Level2 2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Levels\Level2 3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Levels\Level2 4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Levels\Level2 5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Levels\Level2 6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Levels\Level2 7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Levels\Level2 8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Levels\Level2 9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Levels\Level3 1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Levels\Level3 2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Levels\Level3 3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Levels\Level3 4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Levels\Level3 5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Levels\Level3 6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Levels\Level3 7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Levels\Level3 8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Levels\Level3 9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Life.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Design\Life.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Design\Life 1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Design\Life 2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Design\Life 3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Design\Life 4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Design\Life3 1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Design\Life3 2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Design\Life3 3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Design\Life3 4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LifeBar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Design\LifeBar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Targets\Target.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Targets\Target 1.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
